@@ -15,3 +15,5 @@ Fixed bug where if user uses pause button then quits without resuming wouldnt co
 Added ability to export all historical data to excel file
 Add a current session time window that appears on second use for easier monitoring
 Removed Quit button as it wasn't necessary pressing X achieves same outcome
+
+v2 exe compressed with: pyinstaller -w -F --onefile --icon=icon.ico --upx-dir=upx_exe_compression\upx-3.96-win64 mastery_clock.py
