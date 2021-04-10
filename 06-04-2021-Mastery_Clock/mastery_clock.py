@@ -67,6 +67,7 @@ def start():
         reset_data_button.pack_forget() #Hide button on start
         export_excel_button.pack_forget()
         pause_button.config(state="normal") #Enable pause button on start button press
+        intro_text.config(foreground = 'green', font = ("Halvetica",11)) #unhide total time text
 
         is_first_use() #check to see if it should pack current session time after > 1 uses
 
@@ -254,8 +255,8 @@ if __name__=='__main__':
     root.iconphoto(False, tk.PhotoImage(file='icon/icon.jpg'))
 
     intro_text = tk.Label( root,
-            text = "Total Time Spent:", font = ("Halvetica",11),
-            background = 'black', foreground = 'green')
+            text = "Total Time Spent:", font = ("Halvetica",1), #Start it very small
+            background = 'black', foreground = 'black') #Start it hidden
     intro_text.pack(fill='x',side='top')
 
     # Create a timeText Label (a text box)
@@ -271,7 +272,7 @@ if __name__=='__main__':
     last_session_text.pack(fill='x')
 
     #Adding in text entry field
-    todays_task = tk.Entry(root, justify='center', font="Halvetica 10 bold", fg='red', bg='white')
+    todays_task = tk.Entry(root, justify='center', font="Halvetica 11 bold", fg='red', bg='white')
     todays_task.insert(10, "What are you doing today? Replace all this text with todays task")
     todays_task.pack(fill='x')
 
@@ -304,7 +305,7 @@ if __name__=='__main__':
     #if user clicks X still save data as if quit was clicked
     root.protocol('WM_DELETE_WINDOW', quitclock)
 
-    #open_obs() #Attempts to open OBS on program start
+    open_obs() #Attempts to open OBS on program start
     check_if_reset()
     initialize()
     update_timeText()
