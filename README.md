@@ -1,2 +1,2 @@
 # Python-Projects
-The collection of my Python projects as I teach myself how to code
+The collection of my Python projects that I have done as project based learning is the most appealing to me
